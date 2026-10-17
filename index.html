@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hassaan Ullah Khan · AI & Data for Small Businesses</title>
+  <meta name="description" content="I build AI website assistants, sales dashboards and automations for small businesses. Fixed prices, delivered in days.">
+  <meta property="og:title" content="Hassaan Ullah Khan · AI & Data for Small Businesses">
+  <meta property="og:description" content="AI website assistants, sales dashboards and automations for small businesses. Fixed prices, delivered in days.">
+  <meta property="og:image" content="img/assistant.webp">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23f4f1ea'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="wrap masthead">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">H</span>Hassaan Ullah Khan</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="wrap hero">
+      <p class="kicker"><span class="status" aria-hidden="true"></span>Available for new projects · Islamabad, working worldwide</p>
+      <h1>AI assistants and data tools for <em>small businesses.</em></h1>
+      <div class="hero-row">
+        <p class="lede">
+          Your website answering customers at 2am. Your sales explained in plain English every Monday.
+          The manual task nobody likes, automated. Built in days, at a fixed price agreed up front.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#contact">Start a project</a>
+          <a class="link-arrow" href="#work">See the work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="wrap section" id="work" aria-labelledby="work-title">
+      <div class="section-label">
+        <h2 id="work-title">Selected work</h2>
+        <p>Two working products, each open-source, each built for a real small-business problem.</p>
+      </div>
+
+      <article class="case">
+        <div class="case-media">
+          <picture class="shot shot-main">
+            <source srcset="img/assistant-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/assistant.webp" width="1600" height="1000" alt="The website assistant answering “Is there a school bus?” with three bullet points and links to the source pages." loading="lazy">
+          </picture>
+          <picture class="shot shot-phone">
+            <source srcset="img/assistant-phone-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="img/assistant-phone.webp" width="780" height="1688" alt="The same assistant on a phone." loading="lazy">
+          </picture>
+        </div>
+        <div class="case-body">
+          <p class="case-num">01</p>
+          <h3>Website AI Assistant</h3>
+          <p class="case-lede">A chat assistant that reads a business’s website and answers visitors’ questions from it, by text or voice, with a link to the page each answer came from.</p>
+          <dl class="case-facts">
+            <div><dt>The problem</dt><dd>Visitors leave when they can’t find fees, hours or “how do I book” in a few seconds, and staff answer the same questions all day.</dd></div>
+            <div><dt>What I built</dt><dd>A crawler that reads the site politely, a search index tuned for the questions customers actually ask, an AI answer step that only uses the site’s own words, and a one-line widget that works on WordPress, Wix, Shopify or custom sites.</dd></div>
+            <div><dt>Details</dt><dd>Voice input and read-aloud, phone layout, rate limiting, a report of questions the website doesn’t answer, and 28 automated tests.</dd></div>
+          </dl>
+          <p class="stack">Python · Flask · BM25 retrieval · LLMs via OpenRouter · Vanilla JS</p>
+          <div class="case-links">
+            <a class="button button-quiet" data-link="assistant" href="#" hidden>Try the live demo</a>
+            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/voice-rag-sunmarke/tree/rebuild-website-assistant">View the code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case case-flip">
+        <div class="case-media">
+          <img class="shot shot-main" src="img/dashboard.webp" width="1280" height="800" alt="Sales dashboard for a sample candle shop: plain-English notes on last week, best seller, products picking up and slowing down, and key numbers." loading="lazy">
+          <img class="shot shot-second" src="img/warehouse.webp" width="1536" height="1000" alt="Data warehouse overview with KPI cards and a monthly sales trend." loading="lazy">
+        </div>
+        <div class="case-body">
+          <p class="case-num">02</p>
+          <h3>Know Your Numbers</h3>
+          <p class="case-lede">A weekly sales dashboard for small online shops. Drop in a Shopify orders export and it tells you, in plain English, what changed last week and what to do about it.</p>
+          <dl class="case-facts">
+            <div><dt>The problem</dt><dd>Shop owners have the data but no analyst. Shopify’s reports show numbers, not what they mean.</dd></div>
+            <div><dt>What I built</dt><dd>Automatic weekly notes (best seller, products slowing down, customers to win back, what last year says about next month), plus trend, product, customer and seasonality charts.</dd></div>
+            <div><dt>Also inside</dt><dd>My university data-warehouse project, rebuilt: a star schema over 100,000+ transactions with 20 analytical SQL queries, each answered on one page with a chart.</dd></div>
+          </dl>
+          <p class="stack">Python · SQL · SQLite · ETL · Chart.js</p>
+          <div class="case-links">
+            <a class="button button-quiet" data-link="dashboard" href="#" hidden>Try the live demo</a>
+            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/Walmart-sales-Data-warehouse-and-ETL-systems">View the code</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Services -->
+    <section class="wrap section" id="services" aria-labelledby="services-title">
+      <div class="section-label">
+        <h2 id="services-title">What I can build for you</h2>
+        <p>Fixed prices, agreed before I start, and a working preview before anything goes live.</p>
+      </div>
+      <ol class="offers">
+        <li>
+          <h3>AI assistant for your website</h3>
+          <p>Answers customers’ questions from your own website, day and night. Can also capture leads or connect to WhatsApp.</p>
+          <p class="price"><b>from $400</b> setup · $50/month hosting & updates</p>
+          <p class="time">Ready in about a week</p>
+        </li>
+        <li>
+          <h3>“Know your numbers” dashboard</h3>
+          <p>Your sales, customers and stock in one place, from Shopify, your POS or spreadsheets, with plain-English weekly insights.</p>
+          <p class="price"><b>from $300</b> one-off</p>
+          <p class="time">Ready in 5 to 7 days</p>
+        </li>
+        <li>
+          <h3>Automate one manual task</h3>
+          <p>Invoices or PDFs into a spreadsheet, reports that write themselves, data copied between tools. One job, done reliably.</p>
+          <p class="price"><b>from $250</b> one-off</p>
+          <p class="time">Ready in 3 to 5 days</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Process -->
+    <section class="wrap section" aria-labelledby="process-title">
+      <div class="section-label">
+        <h2 id="process-title">How it works</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>A 15-minute call</h3><p>You tell me the problem. I tell you honestly whether I’m the right person for it.</p></li>
+        <li><h3>A fixed quote</h3><p>Scope, price and timeline in writing, usually the same day.</p></li>
+        <li><h3>A working preview</h3><p>You try the real thing early and tell me what to change.</p></li>
+        <li><h3>Launch</h3><p>I set it up on your site or systems and show you how it works.</p></li>
+      </ol>
+    </section>
+
+    <!-- About -->
+    <section class="wrap section about" id="about" aria-labelledby="about-title">
+      <div class="section-label">
+        <h2 id="about-title">About me</h2>
+        <dl class="quick-facts">
+          <div><dt>Education</dt><dd>BS Data Science, FAST-NUCES, 2026</dd></div>
+          <div><dt>Experience</dt><dd>Data analyst intern, Systems Limited · IT intern, Honda Atlas Cars</dd></div>
+          <div><dt>Languages</dt><dd>English (IELTS 7.5), Urdu</dd></div>
+          <div><dt>Time zone</dt><dd>Islamabad, GMT+5. Overlaps with UK and Gulf working hours</dd></div>
+        </dl>
+      </div>
+      <div class="about-body">
+        <p class="about-lede">
+          I’m Hassaan, a data and AI engineer based in Islamabad. I graduated in Data Science from
+          FAST-NUCES and now build practical AI and data tools for small businesses.
+        </p>
+        <p>
+          Before that, I interned as a data analyst at Systems Limited, where I built Power BI dashboards and
+          cut dashboard load time by 30% by optimising SQL. At Honda Atlas Cars I supported SAP finance and sales
+          implementations and data migrations. I write and speak English fluently (IELTS 7.5) and work comfortably
+          across time zones.
+        </p>
+        <div class="skills">
+          <div><h3>AI</h3><p>LLMs, RAG, embeddings, PyTorch, computer vision, NLP</p></div>
+          <div><h3>Data</h3><p>SQL, ETL, data warehousing, Power BI, Tableau, pandas</p></div>
+          <div><h3>Build</h3><p>Python, Flask, Django REST, React, JavaScript, Docker</p></div>
+        </div>
+
+        <h3 class="minor">Earlier projects</h3>
+        <ul class="earlier">
+          <li><a href="https://github.com/HassaanUllahKhan11/GamePlan-AI">GamePlan AI</a><span>Graph neural networks for football set-piece analysis, with a React front end</span></li>
+          <li><a href="https://github.com/HassaanUllahKhan11/AffectVision-Facial-Expression-Valence-Arousal-Recognition">AffectVision</a><span>Facial expression recognition with transfer learning, about 82% accuracy</span></li>
+          <li><a href="https://github.com/HassaanUllahKhan11/LLMEmbed-Reproduction">LLMEmbed reproduction</a><span>Reproduced an ACL 2024 paper on embeddings from small open-source LLMs</span></li>
+          <li><a href="https://github.com/HassaanUllahKhan11/Domain-Specific-Chatbot">Domain-specific chatbot</a><span>Document question answering with LLaMA 2, LangChain and FAISS</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="wrap contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="display">Got a question your website should be answering?</h2>
+      <p class="contact-lede">Tell me about your business and what eats your time. I reply within a day.</p>
+      <div class="contact-actions">
+        <a class="button" href="mailto:hassaanullah2708@gmail.com?subject=Project%20enquiry">Email hassaanullah2708@gmail.com</a>
+        <a class="button button-quiet" data-link="booking" href="#" hidden>Book a 15-minute call</a>
+      </div>
+      <ul class="elsewhere">
+        <li><a href="https://www.linkedin.com/in/hassaan-ullah-khan">LinkedIn</a></li>
+        <li><a href="https://github.com/HassaanUllahKhan11">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year">2026</span> Hassaan Ullah Khan</p>
+    <p>Demo screenshots use public or sample data and aren’t affiliated with the businesses shown.</p>
+  </footer>
+
+  <script>
+    // Fill these in once the demos are deployed; buttons appear only when a URL is set.
+    var LINKS = {
+      assistant: "",  // e.g. "https://your-assistant.vercel.app/demo/sunmarke-school"
+      dashboard: "",  // e.g. "https://your-dashboard.vercel.app"
+      booking: ""     // e.g. "https://cal.com/your-name/15min"
+    };
+    document.querySelectorAll("[data-link]").forEach(function (a) {
+      var url = LINKS[a.dataset.link];
+      if (url) { a.href = url; a.hidden = false; }
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
