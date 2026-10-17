@@ -147,6 +147,8 @@ picture.shot { display: block; }
   width: 23%; border-radius: 22px; border: 6px solid var(--ink);
 }
 .shot-second { margin-top: 20px; width: 78%; margin-left: auto; }
+.shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; align-items: start; }
+@media (min-width: 720px) { .shot-pair { gap: 20px; margin-top: 20px; } }
 @media (min-width: 720px) {
   .shot-phone { display: block; }
   .case:first-of-type .case-media { padding-bottom: 40px; }
@@ -177,9 +179,8 @@ picture.shot { display: block; }
 .offers li::before { content: counter(offer, decimal-leading-zero); font: 400 18px/1 var(--serif); color: var(--accent-ink); margin-bottom: 14px; }
 .offers h3 { font: 600 21px/1.25 var(--sans); margin: 0 0 10px; letter-spacing: -.005em; }
 .offers p { margin: 0 0 14px; color: var(--muted); }
-.offers .price { margin-top: auto; color: var(--ink); font-size: 15px; padding-top: 14px; border-top: 1px solid var(--line); }
-.offers .price b { font: 400 30px/1 var(--serif); margin-right: 6px; letter-spacing: -.01em; }
-.offers .time { margin: 0; font-size: 14px; }
+.offers .fit { margin: auto 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 15px; }
+.offers .fit b { display: block; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; }
 
 /* Steps */
 .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 28px; }
