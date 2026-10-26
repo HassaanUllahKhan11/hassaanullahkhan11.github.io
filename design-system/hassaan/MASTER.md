@@ -2,26 +2,27 @@
 
 ## Project overrides (read first; these win over everything below)
 
-Updated October 2026 for the red + cream redesign (inspired by "Unifiers of Japan" by Daniel Tan). Light only. The generated output below is only a partial fit. Use it as follows:
+Updated October 2026: layout inspired by "Unifiers of Japan" by Daniel Tan, recoloured in an earthy palette. Light only. The generated output below is only a partial fit. Use it as follows:
 
-- **Color: replaced.** Two colours plus cartoon-only shades. `style.css` defines:
+- **Color: replaced.** Moss and rust sit opposite each other on the colour wheel, so they balance; sand and umber are their light and dark neutrals.
 
   | Token | Value | Use |
   |-------|-------|-----|
-  | `--red` | `#C8102E` | display type, fills, rules on cream, red bands |
-  | `--red-deep` | `#8F0B22` | running text on cream |
-  | `--cream` | `#F6EFE2` | paper; text and rules on red |
-  | `--white` | `#FFFDF8` | eye whites, cartoon only |
-  | `--ink` | `#1F1614` | cartoon hair and features |
-  | `--blush` | `#F2B4BC` | cartoon shading |
-  | `--red-soft` | `#E36A7D` | cartoon shading |
+  | `--sand` | `#F1E8D6` | paper; all text on moss bands |
+  | `--moss` | `#4B5532` | bold bands; small labels, kickers and rules on sand |
+  | `--rust` | `#A4471F` | display type, buttons, emblem on sand |
+  | `--umber` | `#3B2A1E` | running text on sand |
+  | `--clay` | `#C98563` | cartoon shading only |
+  | `--blush` | `#E8C3A6` | cartoon skin shading only |
+  | `--white` | `#FFFAF0` | cartoon eye whites only |
+  | `--ink` | `#2A2019` | cartoon hair and features |
 
-  Cream on red is 5.2:1 and red on cream the same, so both pass 4.5:1. Rules on red bands are cream at 42%.
+  Contrast: umber on sand 11.2:1, moss on sand (and sand on moss) 6.5:1, rust on sand (and sand on rust) 4.9:1. All pass 4.5:1.
 - **Spacing: adopted.** The `--space-*` scale below is defined in `style.css`, plus `--gutter` (outside the side rules) and `--pad` (inside).
 - **Typography: not adopted.** Display is Archivo, condensed (62–85% width), 800–900, uppercase. Body is Instrument Sans. The Urdu name uses Noto Naskh Arabic.
 - **Style: partly adopted.** High contrast, visible rules and large blocks fit. Corners are square or nearly square (2px buttons, 6px screenshots); notched frames for statements and cards. Keep smooth transitions.
 - **Motion:** follow `CLAUDE.md`.
-- **Page pattern:** hero (Urdu name, giant name, cartoon) → facts row with emblem → notched statement → Work title → per project: cream title band + red band with screenshots and a notched card → services (big numerals) → process ("+" rows) → about → red contact band with footer.
+- **Page pattern:** hero (Urdu name, giant name, cartoon) on moss → facts row with emblem → notched statement → Work title → per project: sand title band + moss band with screenshots and a notched card → services (big numerals) → process ("+" rows) → about → moss contact band with footer.
 - **Component specs below:** hex values there are examples. Always use the tokens.
 
 > **LOGIC:** When building a specific page, first check `design-system/pages/[page-name].md`.

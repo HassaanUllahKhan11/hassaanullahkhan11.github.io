@@ -7,15 +7,15 @@ Static one-page portfolio, hosted on GitHub Pages.
 - Only `index.html`, `style.css`, and small vanilla JS.
 
 ## Direction (redesign, October 2026)
-- Inspired by Daniel Tan's "Unifiers of Japan" Dribbble shot: two colours (crimson + cream), a framed page with thin side rules and tiny rotated margin labels, condensed heavy uppercase display type, red bands for showpieces, cream bands for reading, notched frames, numbered "+" rows.
+- Layout inspired by Daniel Tan's "Unifiers of Japan" Dribbble shot, recoloured in earthy tones: a framed page with thin side rules and tiny rotated margin labels, condensed heavy uppercase display type, moss bands for showpieces, sand bands for reading, notched frames, numbered "+" rows.
 - Hero: Urdu name above a giant name, with an original animated cartoon (inline SVG) standing over the letters. The cartoon was requested by Hassaan; it can be swapped for one drawn from his photo.
 - Only real content otherwise: no invented client logos, testimonials or stats.
 - Work happens on the `redesign` branch.
 
 ## Theming
-- Light only: red and cream for everyone. No dark mode.
+- Light only, earthy palette: sand paper, moss green bands, rust display type and buttons, umber running text. No dark mode.
 - Change colors by updating the tokens at the top of `style.css`. Never hard-code hex colors in component rules (the favicon and `theme-color` meta are the only exceptions).
-- `--red` for display type, fills and rules; `--red-deep` for running text on cream; cream text on red. `--ink`, `--blush`, `--red-soft`, `--white` are for the cartoon only.
+- On sand: `--rust` for big type, buttons and the emblem; `--moss` for small labels, kickers and rules; `--umber` for body text. On moss bands: sand for everything. `--ink`, `--blush`, `--clay`, `--white` are for the cartoon only.
 
 ## Typography
 - Display: Archivo (Google Fonts variable), weight 800–900, `font-stretch` 62–85% (condensed), uppercase.
