@@ -9,220 +9,373 @@
   <meta property="og:description" content="AI website assistants, sales dashboards and automations for small businesses.">
   <meta property="og:image" content="img/assistant.webp">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23f4f1ea'%3EH%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#4b5532">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%234b5532'/%3E%3Ctext x='32' y='47' font-family='Arial Narrow,Arial,sans-serif' font-weight='900' font-size='40' text-anchor='middle' fill='%23f1e8d6'%3EH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600&family=Noto+Naskh+Arabic:wght@700&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Hide [data-animate] content only when we're going to animate it in; give up if Motion is slow.
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("motion");
+      setTimeout(function () { if (!window.Motion) document.documentElement.classList.remove("motion"); }, 2500);
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#work">Skip to work</a>
 
-  <header class="wrap masthead">
-    <a class="brand" href="#top"><span class="mark" aria-hidden="true">H</span>Hassaan Ullah Khan</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Contact</a>
-    </nav>
+  <!-- 01 Hero: moss band, centred nav, Urdu name, giant name, cartoon standing over the letters. -->
+  <header class="band band-moss hero" id="top" data-index="01 / 07" data-name="Data &amp; AI engineer">
+    <div class="rail">
+      <nav class="topnav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="hero-stage" data-animate data-stagger>
+        <p class="hero-urdu" lang="ur" dir="rtl">حسان اللہ خان</p>
+        <h1 class="hero-name" id="hero-title"><span>Hassaan</span> <span>Ullah Khan</span></h1>
+        <div class="hero-toon">
+          <svg class="toon" viewBox="0 0 600 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="toon-title">
+            <title id="toon-title">Cartoon of Hassaan, a data and AI engineer, with a chat bubble, a bar chart and a data network floating around him.</title>
+            <defs>
+              <linearGradient id="toon-face" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0.38" style="stop-color: var(--sand)"/>
+                <stop offset="1" style="stop-color: var(--blush)"/>
+              </linearGradient>
+              <linearGradient id="toon-neck" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" style="stop-color: var(--blush)"/>
+                <stop offset="1" style="stop-color: var(--clay)"/>
+              </linearGradient>
+              <!-- Jacket motif: a little "data flower", a node with four neighbours. -->
+              <g id="toon-node">
+                <circle r="6"/><circle cx="12" r="4.5"/><circle cx="-12" r="4.5"/><circle cy="12" r="4.5"/><circle cy="-12" r="4.5"/>
+              </g>
+            </defs>
+          
+            <!-- Floating icons (behind the figure where they overlap) -->
+            <g class="toon-float toon-float-1">
+              <path class="t-sand" d="M70 214h118a16 16 0 0 1 16 16v46a16 16 0 0 1-16 16h-62l-26 22v-22H70a16 16 0 0 1-16-16v-46a16 16 0 0 1 16-16z"/>
+              <circle class="t-rust" cx="99" cy="253" r="7"/><circle class="t-rust" cx="129" cy="253" r="7"/><circle class="t-rust" cx="159" cy="253" r="7"/>
+            </g>
+            <g class="toon-float toon-float-2">
+              <rect class="t-sand" x="448" y="196" width="96" height="96" rx="14"/>
+              <rect class="t-rust" x="466" y="250" width="16" height="26" rx="3"/>
+              <rect class="t-rust" x="488" y="230" width="16" height="46" rx="3"/>
+              <rect class="t-rust" x="510" y="212" width="16" height="64" rx="3"/>
+            </g>
+            <g class="toon-float toon-float-3">
+              <path class="t-line" d="M492 372 L540 404 L500 438 Z"/>
+              <circle class="t-sand" cx="492" cy="372" r="13"/><circle class="t-sand" cx="540" cy="404" r="11"/><circle class="t-sand" cx="500" cy="438" r="15"/>
+            </g>
+          
+            <!-- Jacket, shirt, neck -->
+            <path class="t-ink" d="M232 452 L368 452 L330 640 L270 640 Z"/>
+            <path class="t-stripe" d="M286 470 V640 M300 476 V640 M314 470 V640"/>
+            <path class="t-neck" d="M260 392 H340 L346 462 L300 506 L254 462 Z"/>
+            <path class="t-sand" d="M28 640 C 46 528 128 470 238 450 L300 520 L282 640 Z"/>
+            <path class="t-sand" d="M572 640 C 554 528 472 470 362 450 L300 520 L318 640 Z"/>
+            <path class="t-edge" d="M238 450 L300 520 L362 450"/>
+            <g class="t-rust">
+              <use href="#toon-node" x="108" y="592"/><use href="#toon-node" x="170" y="528"/><use href="#toon-node" x="214" y="604"/>
+              <use href="#toon-node" x="148" y="636"/><use href="#toon-node" x="72" y="636"/>
+              <use href="#toon-node" x="430" y="528"/><use href="#toon-node" x="492" y="592"/><use href="#toon-node" x="386" y="604"/>
+              <use href="#toon-node" x="452" y="636"/><use href="#toon-node" x="528" y="636"/>
+            </g>
+          
+            <!-- Head -->
+            <ellipse class="t-blush" cx="211" cy="330" rx="15" ry="26"/>
+            <ellipse class="t-blush" cx="389" cy="330" rx="15" ry="26"/>
+            <path class="t-face" d="M300 212 C 366 212 394 262 392 322 C 390 378 354 424 300 427 C 246 424 210 378 208 322 C 206 262 234 212 300 212 Z"/>
+          
+            <!-- Hair: short sides, swept quiff -->
+            <path class="t-ink" d="M206 318 C 196 236 238 186 300 182 C 364 180 406 226 394 318 C 390 290 382 268 368 256 C 336 272 282 270 240 250 C 222 266 210 290 206 318 Z"/>
+            <path class="t-ink" d="M236 252 C 236 186 314 150 384 186 C 400 196 410 214 404 236 C 386 212 344 206 312 222 C 290 234 262 246 236 252 Z"/>
+          
+            <!-- Face -->
+            <path class="t-brow" d="M240 290 Q262 280 283 286"/>
+            <path class="t-brow" d="M317 286 Q338 280 360 290"/>
+            <g class="toon-eyes">
+              <g class="toon-eye">
+                <ellipse class="t-eye" cx="262" cy="316" rx="20" ry="11"/>
+                <circle class="t-ink toon-pupil" cx="262" cy="316" r="7"/>
+              </g>
+              <g class="toon-eye">
+                <ellipse class="t-eye" cx="338" cy="316" rx="20" ry="11"/>
+                <circle class="t-ink toon-pupil" cx="338" cy="316" r="7"/>
+              </g>
+            </g>
+            <path class="t-ink" d="M300 322 L287 362 Q300 368 313 362 Z"/>
+            <path class="t-mouth" d="M278 386 Q300 400 322 386"/>
+            <circle class="t-cheek" cx="242" cy="360" r="14"/>
+            <circle class="t-cheek" cx="358" cy="360" r="14"/>
+          </svg>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="wrap hero">
-      <p class="kicker"><span class="status" aria-hidden="true"></span>Available for new projects · Islamabad, working worldwide</p>
-      <h1>AI assistants and data tools for <em>small businesses.</em></h1>
-      <div class="hero-row">
-        <p class="lede">
-          Your website answering customers at 2am. Your sales explained in plain English every Monday.
-          The manual task nobody likes, automated. Scoped and priced up front, so there are no surprises.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#contact">Start a project</a>
-          <a class="link-arrow" href="#work">See the work</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work -->
-    <section class="wrap section" id="work" aria-labelledby="work-title">
-      <div class="section-label">
-        <h2 id="work-title">Selected work</h2>
-        <p>Three working products, each open-source: two built for everyday small-business problems, and the machine-learning platform behind my final-year project.</p>
-      </div>
-
-      <article class="case">
-        <div class="case-media">
-          <picture class="shot shot-main">
-            <source srcset="img/assistant-dark.webp" media="(prefers-color-scheme: dark)">
-            <img src="img/assistant.webp" width="1600" height="1000" alt="The website assistant answering “Is there a school bus?” with three bullet points and links to the source pages." loading="lazy">
-          </picture>
-          <picture class="shot shot-phone">
-            <source srcset="img/assistant-phone-dark.webp" media="(prefers-color-scheme: dark)">
-            <img src="img/assistant-phone.webp" width="780" height="1688" alt="The same assistant on a phone." loading="lazy">
-          </picture>
-        </div>
-        <div class="case-body">
-          <p class="case-num">01</p>
-          <h3>Website AI Assistant</h3>
-          <p class="case-lede">A chat assistant that reads a business’s website and answers visitors’ questions from it, by text or voice, with a link to the page each answer came from.</p>
-          <dl class="case-facts">
-            <div><dt>The problem</dt><dd>Visitors leave when they can’t find fees, hours or “how do I book” in a few seconds, and staff answer the same questions all day.</dd></div>
-            <div><dt>What I built</dt><dd>A crawler that reads the site politely, a search index tuned for the questions customers actually ask, an AI answer step that only uses the site’s own words, and a one-line widget that works on WordPress, Wix, Shopify or custom sites.</dd></div>
-            <div><dt>Details</dt><dd>Voice input and read-aloud, phone layout, rate limiting, a report of questions the website doesn’t answer, and 28 automated tests.</dd></div>
-          </dl>
-          <p class="stack">Python · Flask · BM25 retrieval · LLMs via OpenRouter · Vanilla JS</p>
-          <div class="case-links">
-            <a class="button button-quiet" data-link="assistant" href="#" hidden>Try the live demo</a>
-            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/voice-rag-sunmarke/tree/rebuild-website-assistant">View the code</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case case-flip">
-        <div class="case-media">
-          <img class="shot shot-main" src="img/dashboard.webp" width="1280" height="800" alt="Sales dashboard for a sample candle shop: plain-English notes on last week, best seller, products picking up and slowing down, and key numbers." loading="lazy">
-          <img class="shot shot-second" src="img/warehouse.webp" width="1536" height="1000" alt="Data warehouse overview with KPI cards and a monthly sales trend." loading="lazy">
-        </div>
-        <div class="case-body">
-          <p class="case-num">02</p>
-          <h3>Know Your Numbers</h3>
-          <p class="case-lede">A weekly sales dashboard for small online shops. Drop in a Shopify orders export and it tells you, in plain English, what changed last week and what to do about it.</p>
-          <dl class="case-facts">
-            <div><dt>The problem</dt><dd>Shop owners have the data but no analyst. Shopify’s reports show numbers, not what they mean.</dd></div>
-            <div><dt>What I built</dt><dd>Automatic weekly notes (best seller, products slowing down, customers to win back, what last year says about next month), plus trend, product, customer and seasonality charts.</dd></div>
-            <div><dt>Also inside</dt><dd>My university data-warehouse project, rebuilt: a star schema over 100,000+ transactions with 20 analytical SQL queries, each answered on one page with a chart.</dd></div>
-          </dl>
-          <p class="stack">Python · SQL · SQLite · ETL · Chart.js</p>
-          <div class="case-links">
-            <a class="button button-quiet" data-link="dashboard" href="#" hidden>Try the live demo</a>
-            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/Walmart-sales-Data-warehouse-and-ETL-systems">View the code</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="case-media">
-          <img class="shot shot-main" src="img/gameplan-ball.webp" width="932" height="761" alt="GamePlan AI: nine attackers, ten defenders and a goalkeeper placed on a pitch, with the ball set for a corner." loading="lazy">
-          <div class="shot-pair">
-            <img class="shot" src="img/gameplan-place.webp" width="1032" height="877" alt="Placing attackers, defenders and the goalkeeper before generating a simulation." loading="lazy">
-            <img class="shot" src="img/gameplan-result.webp" width="1176" height="1456" alt="Simulation result: each attacker’s chance of receiving the ball and a 78% overall success rate." loading="lazy">
-          </div>
-        </div>
-        <div class="case-body">
-          <p class="case-num">03</p>
-          <h3>GamePlan AI</h3>
-          <p class="case-lede">A football analytics platform that helps coaches design and test set pieces. Place the players, set the ball, and the model predicts how the corner or free kick will play out.</p>
-          <dl class="case-facts">
-            <div><dt>The problem</dt><dd>Coaches plan corners and free kicks on whiteboards, with no way to test which runs and positions actually create chances.</dd></div>
-            <div><dt>What I built</dt><dd>Graph neural networks that read player positions as a network, then score each attacker’s chance of receiving the ball, suggest better positioning, and simulate the set piece with an overall success rate.</dd></div>
-            <div><dt>Details</dt><dd>Corner and free-kick modes, interactive player placement, animated simulations, separate Flask services for analysis, optimisation and simulation, and JWT sign-in. My final-year project.</dd></div>
-          </dl>
-          <p class="stack">PyTorch · PyTorch Geometric · Flask · React · JWT</p>
-          <div class="case-links">
-            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/GamePlan-AI">View the code</a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Services -->
-    <section class="wrap section" id="services" aria-labelledby="services-title">
-      <div class="section-label">
-        <h2 id="services-title">What I can build for you</h2>
-        <p>Every project gets a fixed quote before I start, and a working preview before anything goes live.</p>
-      </div>
-      <ol class="offers">
-        <li>
-          <h3>AI assistant for your website</h3>
-          <p>Answers customers’ questions from your own website, day and night. Can also capture leads or connect to WhatsApp.</p>
-          <p class="fit"><b>Good for</b> clinics, schools, salons, agencies, any business answering the same questions every day</p>
-        </li>
-        <li>
-          <h3>“Know your numbers” dashboard</h3>
-          <p>Your sales, customers and stock in one place, from Shopify, your POS or spreadsheets, with plain-English weekly insights.</p>
-          <p class="fit"><b>Good for</b> online shops, restaurants and retailers with data they never look at</p>
-        </li>
-        <li>
-          <h3>Automate one manual task</h3>
-          <p>Invoices or PDFs into a spreadsheet, reports that write themselves, data copied between tools. One job, done reliably.</p>
-          <p class="fit"><b>Good for</b> small offices where someone spends hours a week copying data by hand</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Process -->
-    <section class="wrap section" aria-labelledby="process-title">
-      <div class="section-label">
-        <h2 id="process-title">How it works</h2>
-      </div>
-      <ol class="steps">
-        <li><h3>A 15-minute call</h3><p>You tell me the problem. I tell you honestly whether I’m the right person for it.</p></li>
-        <li><h3>A fixed quote</h3><p>Scope, price and timeline in writing, so you know exactly what you’re getting.</p></li>
-        <li><h3>A working preview</h3><p>You try the real thing early and tell me what to change.</p></li>
-        <li><h3>Launch</h3><p>I set it up on your site or systems and show you how it works.</p></li>
-      </ol>
-    </section>
-
-    <!-- About -->
-    <section class="wrap section about" id="about" aria-labelledby="about-title">
-      <div class="section-label">
-        <h2 id="about-title">About me</h2>
-        <dl class="quick-facts">
-          <div><dt>Education</dt><dd>BS Data Science, FAST-NUCES, 2026</dd></div>
-          <div><dt>Experience</dt><dd>Data analyst intern, Systems Limited · IT intern, Honda Atlas Cars</dd></div>
-          <div><dt>Languages</dt><dd>English (IELTS 7.5), Urdu</dd></div>
-          <div><dt>Time zone</dt><dd>Islamabad, GMT+5. Overlaps with UK and Gulf working hours</dd></div>
+  <main>
+    <!-- 02 In short: emblem + six facts, then the one-sentence statement in a notched frame. -->
+    <section class="band band-cream" aria-label="In short" data-index="02 / 07" data-name="In short">
+      <div class="rail sec facts-wrap">
+        <svg class="emblem" viewBox="0 0 200 200" aria-hidden="true">
+          <!-- A radial bar chart as a family crest -->
+          <circle cx="100" cy="100" r="22"/>
+          <rect x="92" y="18" width="16" height="56" rx="8"/>
+          <rect x="92" y="30" width="16" height="44" rx="8" transform="rotate(45 100 100)"/>
+          <rect x="92" y="10" width="16" height="64" rx="8" transform="rotate(90 100 100)"/>
+          <rect x="92" y="38" width="16" height="36" rx="8" transform="rotate(135 100 100)"/>
+          <rect x="92" y="22" width="16" height="52" rx="8" transform="rotate(180 100 100)"/>
+          <rect x="92" y="34" width="16" height="40" rx="8" transform="rotate(225 100 100)"/>
+          <rect x="92" y="16" width="16" height="58" rx="8" transform="rotate(270 100 100)"/>
+          <rect x="92" y="28" width="16" height="46" rx="8" transform="rotate(315 100 100)"/>
+        </svg>
+        <dl class="facts" data-animate data-stagger>
+          <div><dt>Role</dt><dd>Data &amp; AI engineer</dd></div>
+          <div><dt>Based in</dt><dd>Islamabad · GMT+5</dd></div>
+          <div><dt>Education</dt><dd>BS Data Science, FAST-NUCES ’26</dd></div>
+          <div><dt>Experience</dt><dd>Systems Ltd · Honda Atlas</dd></div>
+          <div><dt>Languages</dt><dd>English (IELTS 7.5) · Urdu</dd></div>
+          <div><dt>Built</dt><dd>3 open-source products</dd></div>
         </dl>
       </div>
-      <div class="about-body">
-        <p class="about-lede">
-          I’m Hassaan, a data and AI engineer based in Islamabad. I graduated in Data Science from
-          FAST-NUCES and now build practical AI and data tools for small businesses.
-        </p>
-        <p>
-          Before that, I interned as a data analyst at Systems Limited, where I built Power BI dashboards and
-          cut dashboard load time by 30% by optimising SQL. At Honda Atlas Cars I supported SAP finance and sales
-          implementations and data migrations. I write and speak English fluently (IELTS 7.5) and work comfortably
-          across time zones.
-        </p>
-        <div class="skills">
-          <div><h3>AI</h3><p>LLMs, RAG, embeddings, PyTorch, computer vision, NLP</p></div>
-          <div><h3>Data</h3><p>SQL, ETL, data warehousing, Power BI, Tableau, pandas</p></div>
-          <div><h3>Build</h3><p>Python, Flask, Django REST, React, JavaScript, Docker</p></div>
-        </div>
+    </section>
 
-        <h3 class="minor">Earlier projects</h3>
-        <ul class="earlier">
-          <li><a href="https://github.com/HassaanUllahKhan11/AffectVision-Facial-Expression-Valence-Arousal-Recognition">AffectVision</a><span>Facial expression recognition with transfer learning, about 82% accuracy</span></li>
-          <li><a href="https://github.com/HassaanUllahKhan11/LLMEmbed-Reproduction">LLMEmbed reproduction</a><span>Reproduced an ACL 2024 paper on embeddings from small open-source LLMs</span></li>
-          <li><a href="https://github.com/HassaanUllahKhan11/Domain-Specific-Chatbot">Domain-specific chatbot</a><span>Document question answering with LLaMA 2, LangChain and FAISS</span></li>
+    <section class="band band-cream" aria-labelledby="statement-title" data-index="02 / 07" data-name="What I do">
+      <div class="rail sec">
+        <div class="notched statement" data-animate>
+          <svg class="emblem emblem-sm" viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="26"/>
+            <rect x="90" y="16" width="20" height="58" rx="10"/>
+            <rect x="90" y="30" width="20" height="44" rx="10" transform="rotate(60 100 100)"/>
+            <rect x="90" y="24" width="20" height="50" rx="10" transform="rotate(120 100 100)"/>
+            <rect x="90" y="36" width="20" height="38" rx="10" transform="rotate(180 100 100)"/>
+            <rect x="90" y="20" width="20" height="54" rx="10" transform="rotate(240 100 100)"/>
+            <rect x="90" y="32" width="20" height="42" rx="10" transform="rotate(300 100 100)"/>
+          </svg>
+          <h2 class="statement-text" id="statement-title">I build AI assistants and data tools that give small businesses their time back</h2>
+          <p class="body-c">
+            Your website answering customers at 2am. Your sales explained in plain English every Monday.
+            The manual task nobody likes, automated. Scoped and priced up front, so there are no surprises.
+          </p>
+          <div class="actions">
+            <a class="button" href="#contact">Start a project</a>
+            <a class="button button-quiet" href="#work">See the work</a>
+          </div>
+          <p class="avail"><span class="status" aria-hidden="true"></span>Available for new projects · 15-minute intro call, fixed quote before I start</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Work -->
+    <section id="work" aria-labelledby="work-title">
+      <div class="band band-cream" data-index="03 / 07" data-name="Selected work">
+        <div class="rail sec title-block" data-animate data-stagger>
+          <p class="kicker">Selected</p>
+          <h2 class="mega" id="work-title">Work</h2>
+          <p class="body-c">Three working products, each open-source: two built for everyday small-business problems, and the machine-learning platform behind my final-year project.</p>
+        </div>
+      </div>
+
+      <article class="project" aria-labelledby="p1-title">
+        <div class="band band-cream" data-index="Project 01" data-name="For clinics, schools and salons">
+          <div class="rail sec title-block" data-animate data-stagger>
+            <p class="kicker">For clinics, schools and salons</p>
+            <h3 class="mega mega-md" id="p1-title">Website AI Assistant</h3>
+            <p class="body-c">A chat assistant that reads a business’s website and answers visitors’ questions from it, by text or voice, with a link to the page each answer came from.</p>
+          </div>
+        </div>
+        <div class="band band-moss" data-index="Project 01" data-name="Python · Flask · LLMs">
+          <div class="rail split">
+            <div class="split-media" data-animate>
+              <div class="device-pair">
+                <img class="shot" src="img/assistant.webp" width="1600" height="1000" alt="The website assistant answering “Is there a school bus?” with three bullet points and links to the source pages." loading="lazy">
+                <img class="shot shot-phone" src="img/assistant-phone.webp" width="780" height="1688" alt="The same assistant on a phone." loading="lazy">
+              </div>
+            </div>
+            <div class="card notched" data-animate data-stagger>
+              <p class="card-lead">Visitors leave when they can’t find fees, hours or “how do I book” in seconds</p>
+              <dl class="card-facts">
+                <div><dt>What I built</dt><dd>A crawler that reads the site politely, a search index tuned for the questions customers actually ask, an AI answer step that only uses the site’s own words, and a one-line widget for WordPress, Wix, Shopify or custom sites.</dd></div>
+                <div><dt>Details</dt><dd>Voice input and read-aloud, phone layout, rate limiting, a report of questions the website doesn’t answer, and 28 automated tests.</dd></div>
+              </dl>
+              <ul class="stack" aria-label="Built with"><li>Python</li><li>Flask</li><li>BM25 retrieval</li><li>LLMs via OpenRouter</li><li>Vanilla JS</li></ul>
+              <div class="actions">
+                <a class="button" data-link="assistant" href="#" hidden>Try the live demo</a>
+                <a class="button button-quiet" href="https://github.com/HassaanUllahKhan11/voice-rag-sunmarke/tree/rebuild-website-assistant">View the code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" aria-labelledby="p2-title">
+        <div class="band band-cream" data-index="Project 02" data-name="For small online shops">
+          <div class="rail sec title-block" data-animate data-stagger>
+            <p class="kicker">For small online shops</p>
+            <h3 class="mega mega-md" id="p2-title">Know Your Numbers</h3>
+            <p class="body-c">A weekly sales dashboard for small online shops. Drop in a Shopify orders export and it tells you, in plain English, what changed last week and what to do about it.</p>
+          </div>
+        </div>
+        <div class="band band-moss" data-index="Project 02" data-name="Python · SQL · Chart.js">
+          <div class="rail split split-flip">
+            <div class="split-media" data-animate>
+              <img class="shot" src="img/dashboard.webp" width="1280" height="800" alt="Sales dashboard for a sample candle shop: plain-English notes on last week, best seller, products picking up and slowing down, and key numbers." loading="lazy">
+              <img class="shot shot-under" src="img/warehouse.webp" width="1536" height="1000" alt="Data warehouse overview with KPI cards and a monthly sales trend." loading="lazy">
+            </div>
+            <div class="card notched" data-animate data-stagger>
+              <p class="card-lead">Shop owners have the data but no analyst</p>
+              <dl class="card-facts">
+                <div><dt>What I built</dt><dd>Automatic weekly notes (best seller, products slowing down, customers to win back, what last year says about next month), plus trend, product, customer and seasonality charts.</dd></div>
+                <div><dt>Also inside</dt><dd>My university data-warehouse project, rebuilt: a star schema over 100,000+ transactions with 20 analytical SQL queries, each answered on one page with a chart.</dd></div>
+              </dl>
+              <ul class="stack" aria-label="Built with"><li>Python</li><li>SQL</li><li>SQLite</li><li>ETL</li><li>Chart.js</li></ul>
+              <div class="actions">
+                <a class="button" data-link="dashboard" href="#" hidden>Try the live demo</a>
+                <a class="button button-quiet" href="https://github.com/HassaanUllahKhan11/Walmart-sales-Data-warehouse-and-ETL-systems">View the code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" aria-labelledby="p3-title">
+        <div class="band band-cream" data-index="Project 03" data-name="Final-year project">
+          <div class="rail sec title-block" data-animate data-stagger>
+            <p class="kicker">Final-year project · sports analytics</p>
+            <h3 class="mega mega-md" id="p3-title">GamePlan AI</h3>
+            <p class="body-c">A football analytics platform that helps coaches design and test set pieces. Place the players, set the ball, and the model predicts how the corner or free kick will play out.</p>
+          </div>
+        </div>
+        <div class="band band-moss" data-index="Project 03" data-name="PyTorch · Flask · React">
+          <div class="rail split">
+            <div class="split-media" data-animate>
+              <img class="shot" src="img/gameplan-ball.webp" width="932" height="761" alt="GamePlan AI: nine attackers, ten defenders and a goalkeeper placed on a pitch, with the ball set for a corner." loading="lazy">
+              <div class="shot-pair">
+                <img class="shot" src="img/gameplan-place.webp" width="1032" height="877" alt="Placing attackers, defenders and the goalkeeper before generating a simulation." loading="lazy">
+                <img class="shot" src="img/gameplan-result.webp" width="1176" height="1456" alt="Simulation result: each attacker’s chance of receiving the ball and a 78% overall success rate." loading="lazy">
+              </div>
+            </div>
+            <div class="card notched" data-animate data-stagger>
+              <p class="card-lead">Coaches plan set pieces on whiteboards, with no way to test them</p>
+              <dl class="card-facts">
+                <div><dt>What I built</dt><dd>Graph neural networks that read player positions as a network, then score each attacker’s chance of receiving the ball, suggest better positioning, and simulate the set piece with an overall success rate.</dd></div>
+                <div><dt>Details</dt><dd>Corner and free-kick modes, interactive player placement, animated simulations, separate Flask services for analysis, optimisation and simulation, and JWT sign-in.</dd></div>
+              </dl>
+              <ul class="stack" aria-label="Built with"><li>PyTorch</li><li>PyTorch Geometric</li><li>Flask</li><li>React</li><li>JWT</li></ul>
+              <div class="actions">
+                <a class="button button-quiet" href="https://github.com/HassaanUllahKhan11/GamePlan-AI">View the code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 04 Services -->
+    <section class="band band-cream" id="services" aria-labelledby="services-title" data-index="04 / 07" data-name="Services">
+      <div class="rail sec">
+        <div class="title-block" data-animate data-stagger>
+          <p class="kicker">What I can</p>
+          <h2 class="mega" id="services-title">Build for you</h2>
+          <p class="body-c">Every project gets a fixed quote before I start, and a working preview before anything goes live.</p>
+        </div>
+        <ol class="offers" data-animate data-stagger>
+          <li>
+            <h3>AI assistant for your website</h3>
+            <p>Answers customers’ questions from your own website, day and night. Can also capture leads or connect to WhatsApp.</p>
+            <p class="fit"><b>Good for</b> clinics, schools, salons, agencies, any business answering the same questions every day</p>
+          </li>
+          <li>
+            <h3>“Know your numbers” dashboard</h3>
+            <p>Your sales, customers and stock in one place, from Shopify, your POS or spreadsheets, with plain-English weekly insights.</p>
+            <p class="fit"><b>Good for</b> online shops, restaurants and retailers with data they never look at</p>
+          </li>
+          <li>
+            <h3>Automate one manual task</h3>
+            <p>Invoices or PDFs into a spreadsheet, reports that write themselves, data copied between tools. One job, done reliably.</p>
+            <p class="fit"><b>Good for</b> small offices where someone spends hours a week copying data by hand</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 Process: numbered rows that open, like the inspiration's timeline. -->
+    <section class="band band-cream" id="process" aria-labelledby="process-title" data-index="05 / 07" data-name="How it works">
+      <div class="rail sec">
+        <div class="title-block" data-animate data-stagger>
+          <p class="kicker">From first call to launch</p>
+          <h2 class="mega" id="process-title">How it works</h2>
+        </div>
+        <div class="rows" data-animate data-stagger>
+          <details open><summary><span class="row-num">01</span><span class="row-title">A 15-minute call</span><span class="plus" aria-hidden="true"></span></summary><p>You tell me the problem. I tell you honestly whether I’m the right person for it.</p></details>
+          <details><summary><span class="row-num">02</span><span class="row-title">A fixed quote</span><span class="plus" aria-hidden="true"></span></summary><p>Scope, price and timeline in writing, so you know exactly what you’re getting.</p></details>
+          <details><summary><span class="row-num">03</span><span class="row-title">A working preview</span><span class="plus" aria-hidden="true"></span></summary><p>You try the real thing early and tell me what to change.</p></details>
+          <details><summary><span class="row-num">04</span><span class="row-title">Launch</span><span class="plus" aria-hidden="true"></span></summary><p>I set it up on your site or systems and show you how it works.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 About -->
+    <section class="band band-cream" id="about" aria-labelledby="about-title" data-index="06 / 07" data-name="About me">
+      <div class="rail sec">
+        <div class="title-block" data-animate data-stagger>
+          <p class="kicker">The person</p>
+          <h2 class="mega" id="about-title">About me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text" data-animate>
+            <p class="about-lede">I’m Hassaan, a data and AI engineer based in Islamabad. I graduated in Data Science from FAST-NUCES and now build practical AI and data tools for small businesses.</p>
+            <p>
+              Before that, I interned as a data analyst at Systems Limited, where I built Power BI dashboards and
+              cut dashboard load time by 30% by optimising SQL. At Honda Atlas Cars I supported SAP finance and sales
+              implementations and data migrations. I write and speak English fluently (IELTS 7.5) and work comfortably
+              across time zones, with hours that overlap the UK and the Gulf.
+            </p>
+          </div>
+          <div class="about-side" data-animate>
+            <div class="skills">
+              <div><h3>AI</h3><p>LLMs, RAG, embeddings, PyTorch, computer vision, NLP</p></div>
+              <div><h3>Data</h3><p>SQL, ETL, data warehousing, Power BI, Tableau, pandas</p></div>
+              <div><h3>Build</h3><p>Python, Flask, Django REST, React, JavaScript, Docker</p></div>
+            </div>
+            <h3 class="minor">Earlier projects</h3>
+            <ul class="earlier">
+              <li><a href="https://github.com/HassaanUllahKhan11/AffectVision-Facial-Expression-Valence-Arousal-Recognition">AffectVision</a><span>Facial expression recognition with transfer learning, about 82% accuracy</span></li>
+              <li><a href="https://github.com/HassaanUllahKhan11/LLMEmbed-Reproduction">LLMEmbed reproduction</a><span>Reproduced an ACL 2024 paper on embeddings from small open-source LLMs</span></li>
+              <li><a href="https://github.com/HassaanUllahKhan11/Domain-Specific-Chatbot">Domain-specific chatbot</a><span>Document question answering with LLaMA 2, LangChain and FAISS</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Contact -->
+    <section class="band band-moss contact" id="contact" aria-labelledby="contact-title" data-index="07 / 07" data-name="Contact">
+      <div class="rail sec title-block" data-animate data-stagger>
+        <p class="kicker">Got a question your website should be answering?</p>
+        <h2 class="mega" id="contact-title">Let’s talk</h2>
+        <p class="body-c">Tell me about your business and what eats your time.</p>
+        <div class="actions">
+          <a class="button" href="mailto:hassaanullah2708@gmail.com?subject=Project%20enquiry">Email hassaanullah2708@gmail.com</a>
+          <a class="button button-quiet" data-link="booking" href="#" hidden>Book a 15-minute call</a>
+        </div>
+        <ul class="elsewhere">
+          <li><a href="https://www.linkedin.com/in/hassaan-ullah-khan">LinkedIn</a></li>
+          <li><a href="https://github.com/HassaanUllahKhan11">GitHub</a></li>
         </ul>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="wrap contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="display">Got a question your website should be answering?</h2>
-      <p class="contact-lede">Tell me about your business and what eats your time.</p>
-      <div class="contact-actions">
-        <a class="button" href="mailto:hassaanullah2708@gmail.com?subject=Project%20enquiry">Email hassaanullah2708@gmail.com</a>
-        <a class="button button-quiet" data-link="booking" href="#" hidden>Book a 15-minute call</a>
-      </div>
-      <ul class="elsewhere">
-        <li><a href="https://www.linkedin.com/in/hassaan-ullah-khan">LinkedIn</a></li>
-        <li><a href="https://github.com/HassaanUllahKhan11">GitHub</a></li>
-      </ul>
+      <footer class="rail footer">
+        <p>© <span id="year">2026</span> Hassaan Ullah Khan</p>
+        <p>Demo screenshots use public or sample data and aren’t affiliated with the businesses shown.</p>
+      </footer>
     </section>
   </main>
-
-  <footer class="wrap footer">
-    <p>© <span id="year">2026</span> Hassaan Ullah Khan</p>
-    <p>Demo screenshots use public or sample data and aren’t affiliated with the businesses shown.</p>
-  </footer>
 
   <script>
     // Fill these in once the demos are deployed; buttons appear only when a URL is set.
@@ -236,6 +389,57 @@
       if (url) { a.href = url; a.hidden = false; }
     });
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Keep the giant hero name inside the frame: shrink it only if the real font would overflow.
+    (function () {
+      var h = document.getElementById("hero-title"), stage = h.parentElement;
+      function fit() {
+        stage.style.removeProperty("--f");
+        var over = h.scrollWidth / h.clientWidth;
+        if (over > 1) stage.style.setProperty("--f", (parseFloat(getComputedStyle(h).fontSize) / over * 0.98) + "px");
+      }
+      fit();
+      if (document.fonts) document.fonts.ready.then(fit);
+      addEventListener("resize", fit);
+    })();
+
+    // Cartoon: pupils follow the pointer a little (mouse only, never under reduced motion).
+    (function () {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(pointer: fine)").matches) return;
+      var eyes = document.querySelector(".toon-eyes");
+      var pupils = document.querySelectorAll(".toon-pupil");
+      if (!eyes) return;
+      addEventListener("pointermove", function (e) {
+        var r = eyes.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        var d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / 300);
+        var x = dx / d * 6 * k, y = dy / d * 3.5 * k;
+        pupils.forEach(function (p) { p.style.transform = "translate(" + x + "px," + y + "px)"; });
+      }, { passive: true });
+    })();
+  </script>
+  <script>
+    // Entrance animations: [data-animate] fades and rises 20px when it scrolls into view;
+    // add data-stagger to animate its children one after another instead.
+    document.addEventListener("DOMContentLoaded", function () {
+      var root = document.documentElement;
+      if (!root.classList.contains("motion")) return;
+      if (!window.Motion) { root.classList.remove("motion"); return; }
+      var animate = Motion.animate, inView = Motion.inView, stagger = Motion.stagger;
+      inView("[data-animate]", function (entry) {
+        var el = entry.target || entry; // Motion 11 passes the IntersectionObserverEntry
+        var targets = el.hasAttribute("data-stagger") ? Array.from(el.children) : [el];
+        // Write the end state first; the animation overrides it while running, so nothing can flash back to hidden.
+        targets.forEach(function (t) { t.style.opacity = "1"; t.style.transform = "none"; });
+        try {
+          animate(targets,
+            { opacity: [0, 1], transform: ["translateY(20px)", "none"] },
+            { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: stagger(0.08) });
+        } catch (e) {
+          root.classList.remove("motion"); // never leave content hidden
+        }
+      }, { margin: "0px 0px -10% 0px" }); // any visible part counts, so very tall blocks still trigger
+    });
   </script>
 </body>
 </html>
