@@ -31,49 +31,41 @@
 
   <header class="masthead">
     <div class="wrap-wide masthead-inner">
-      <a class="brand" href="#top"><span class="mark" aria-hidden="true">H</span><span class="brand-name">Hassaan Ullah Khan</span></a>
+      <a class="brand" href="#top"><span class="mark" aria-hidden="true">H</span><span class="brand-name">Hassaan</span></a>
       <nav aria-label="Sections">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Projects</a>
         <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero -->
+    <!-- Hero: giant name, a phone where the inspiration has its avatar, intro left, CTA right. -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap-wide hero-inner" data-animate data-stagger>
-        <p class="eyebrow">Data &amp; AI engineer · Islamabad, working worldwide</p>
         <h1 id="hero-title" class="hero-title"><span>Hi, I’m</span> <span>Hassaan</span></h1>
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="lede">
-              I build <strong>AI assistants and data tools for small businesses.</strong>
-              Your website answering customers at 2am, your sales explained in plain English every Monday,
-              and the manual task nobody likes, automated.
-            </p>
-            <p class="hero-note"><span class="status" aria-hidden="true"></span>Available for new projects · fixed quote before I start</p>
-          </div>
+        <div class="hero-stage">
+          <p class="hero-intro">A data &amp; AI engineer building AI assistants and data tools for small businesses.</p>
           <div class="hero-phone">
             <picture>
               <source srcset="img/assistant-phone.webp" media="(prefers-color-scheme: light)">
-              <img src="img/assistant-phone-dark.webp" width="780" height="1688" alt="My website AI assistant running on a phone, answering questions about a school from its own website." fetchpriority="high">
+              <img src="img/assistant-phone-dark.webp" width="780" height="1688" alt="My website AI assistant running on a phone, ready to answer questions about a school from its own website." fetchpriority="high">
             </picture>
           </div>
-          <div class="hero-side">
-            <div class="hero-actions">
-              <a class="button button-lg" href="#contact">Start a project</a>
-              <a class="link-arrow" href="#work">See the work</a>
-            </div>
-            <ul class="hero-proof">
-              <li><b>3</b><span>working products, all open-source</span></li>
-              <li><b>100k+</b><span>transactions in my sales data warehouse</span></li>
-              <li><b>GMT+5</b><span>overlaps UK and Gulf hours</span></li>
-            </ul>
+          <div class="hero-cta">
+            <a class="button button-lg" href="#contact">Contact me</a>
+            <p class="hero-note"><span class="status" aria-hidden="true"></span>Available for new projects</p>
           </div>
         </div>
+      </div>
+
+      <!-- Where the inspiration shows client logos: the tools I actually build with. -->
+      <div class="wrap-wide hero-tools" data-animate>
+        <ul aria-label="Tools I build with">
+          <li>Python</li><li>PyTorch</li><li>SQL</li><li>Flask</li><li>React</li><li>Power BI</li><li>Docker</li><li>LLMs</li>
+        </ul>
       </div>
 
       <!-- Marquee of real project screenshots. The second set is a visual duplicate for a seamless loop. -->
