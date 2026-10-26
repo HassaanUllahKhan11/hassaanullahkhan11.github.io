@@ -7,55 +7,103 @@
   <meta name="description" content="I build AI website assistants, sales dashboards and automations for small businesses.">
   <meta property="og:title" content="Hassaan Ullah Khan · AI & Data for Small Businesses">
   <meta property="og:description" content="AI website assistants, sales dashboards and automations for small businesses.">
-  <meta property="og:image" content="img/assistant.webp">
+  <meta property="og:image" content="img/assistant-dark.webp">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5d50'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%23f4f1ea'%3EH%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23db2777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='34' text-anchor='middle' fill='%23ffffff'%3EH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <!-- Archivo (display, variable width + weight), Instrument Sans (body). Instrument Serif stays until the remaining sections are redesigned. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Hide [data-animate] content only when we're going to animate it in; give up if Motion is slow.
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("motion");
+      setTimeout(function () { if (!window.Motion) document.documentElement.classList.remove("motion"); }, 2500);
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#work">Skip to work</a>
 
-  <header class="wrap masthead">
-    <a class="brand" href="#top"><span class="mark" aria-hidden="true">H</span>Hassaan Ullah Khan</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Contact</a>
-    </nav>
+  <header class="masthead">
+    <div class="wrap-wide masthead-inner">
+      <a class="brand" href="#top"><span class="mark" aria-hidden="true">H</span><span class="brand-name">Hassaan Ullah Khan</span></a>
+      <nav aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
     <!-- Hero -->
-    <section class="wrap hero">
-      <p class="kicker"><span class="status" aria-hidden="true"></span>Available for new projects · Islamabad, working worldwide</p>
-      <h1>AI assistants and data tools for <em>small businesses.</em></h1>
-      <div class="hero-row">
-        <p class="lede">
-          Your website answering customers at 2am. Your sales explained in plain English every Monday.
-          The manual task nobody likes, automated. Scoped and priced up front, so there are no surprises.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#contact">Start a project</a>
-          <a class="link-arrow" href="#work">See the work</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap-wide hero-inner" data-animate data-stagger>
+        <p class="eyebrow">Data &amp; AI engineer · Islamabad, working worldwide</p>
+        <h1 id="hero-title" class="hero-title"><span>Hi, I’m</span> <span>Hassaan</span></h1>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="lede">
+              I build <strong>AI assistants and data tools for small businesses.</strong>
+              Your website answering customers at 2am, your sales explained in plain English every Monday,
+              and the manual task nobody likes, automated.
+            </p>
+            <p class="hero-note"><span class="status" aria-hidden="true"></span>Available for new projects · fixed quote before I start</p>
+          </div>
+          <div class="hero-phone">
+            <picture>
+              <source srcset="img/assistant-phone.webp" media="(prefers-color-scheme: light)">
+              <img src="img/assistant-phone-dark.webp" width="780" height="1688" alt="My website AI assistant running on a phone, answering questions about a school from its own website." fetchpriority="high">
+            </picture>
+          </div>
+          <div class="hero-side">
+            <div class="hero-actions">
+              <a class="button button-lg" href="#contact">Start a project</a>
+              <a class="link-arrow" href="#work">See the work</a>
+            </div>
+            <ul class="hero-proof">
+              <li><b>3</b><span>working products, all open-source</span></li>
+              <li><b>100k+</b><span>transactions in my sales data warehouse</span></li>
+              <li><b>GMT+5</b><span>overlaps UK and Gulf hours</span></li>
+            </ul>
+          </div>
         </div>
+      </div>
+
+      <!-- Marquee of real project screenshots. The second set is a visual duplicate for a seamless loop. -->
+      <div class="marquee" data-animate>
+        <ul class="marquee-track" aria-label="Screenshots from my projects">
+          <li><picture><source srcset="img/assistant.webp" media="(prefers-color-scheme: light)"><img src="img/assistant-dark.webp" width="1600" height="1000" alt="Website AI assistant answering a visitor’s question with sources." loading="lazy"></picture></li>
+          <li><img src="img/dashboard.webp" width="1280" height="800" alt="Know Your Numbers: weekly sales notes for a sample shop." loading="lazy"></li>
+          <li><img src="img/gameplan-ball.webp" width="932" height="761" alt="GamePlan AI: players placed for a corner kick." loading="lazy"></li>
+          <li><img src="img/warehouse.webp" width="1536" height="1000" alt="Sales data warehouse overview with KPIs and a monthly trend." loading="lazy"></li>
+          <li><img src="img/gameplan-result.webp" width="1176" height="1456" alt="GamePlan AI simulation with a 78% success rate." loading="lazy"></li>
+        </ul>
+        <ul class="marquee-track marquee-copy" aria-hidden="true">
+          <li><picture><source srcset="img/assistant.webp" media="(prefers-color-scheme: light)"><img src="img/assistant-dark.webp" width="1600" height="1000" alt="" loading="lazy"></picture></li>
+          <li><img src="img/dashboard.webp" width="1280" height="800" alt="" loading="lazy"></li>
+          <li><img src="img/gameplan-ball.webp" width="932" height="761" alt="" loading="lazy"></li>
+          <li><img src="img/warehouse.webp" width="1536" height="1000" alt="" loading="lazy"></li>
+          <li><img src="img/gameplan-result.webp" width="1176" height="1456" alt="" loading="lazy"></li>
+        </ul>
       </div>
     </section>
 
     <!-- Work -->
     <section class="wrap section" id="work" aria-labelledby="work-title">
-      <div class="section-label">
+      <div class="section-label" data-animate>
         <h2 id="work-title">Selected work</h2>
         <p>Three working products, each open-source: two built for everyday small-business problems, and the machine-learning platform behind my final-year project.</p>
       </div>
 
       <article class="case">
-        <div class="case-media">
+        <div class="case-media" data-animate>
           <picture class="shot shot-main">
             <source srcset="img/assistant-dark.webp" media="(prefers-color-scheme: dark)">
             <img src="img/assistant.webp" width="1600" height="1000" alt="The website assistant answering “Is there a school bus?” with three bullet points and links to the source pages." loading="lazy">
@@ -65,8 +113,8 @@
             <img src="img/assistant-phone.webp" width="780" height="1688" alt="The same assistant on a phone." loading="lazy">
           </picture>
         </div>
-        <div class="case-body">
-          <p class="case-num">01</p>
+        <div class="case-body" data-animate data-stagger>
+          <p class="case-num"><span>01</span>For clinics, schools and salons</p>
           <h3>Website AI Assistant</h3>
           <p class="case-lede">A chat assistant that reads a business’s website and answers visitors’ questions from it, by text or voice, with a link to the page each answer came from.</p>
           <dl class="case-facts">
@@ -74,21 +122,21 @@
             <div><dt>What I built</dt><dd>A crawler that reads the site politely, a search index tuned for the questions customers actually ask, an AI answer step that only uses the site’s own words, and a one-line widget that works on WordPress, Wix, Shopify or custom sites.</dd></div>
             <div><dt>Details</dt><dd>Voice input and read-aloud, phone layout, rate limiting, a report of questions the website doesn’t answer, and 28 automated tests.</dd></div>
           </dl>
-          <p class="stack">Python · Flask · BM25 retrieval · LLMs via OpenRouter · Vanilla JS</p>
+          <ul class="stack" aria-label="Built with"><li>Python</li><li>Flask</li><li>BM25 retrieval</li><li>LLMs via OpenRouter</li><li>Vanilla JS</li></ul>
           <div class="case-links">
-            <a class="button button-quiet" data-link="assistant" href="#" hidden>Try the live demo</a>
-            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/voice-rag-sunmarke/tree/rebuild-website-assistant">View the code</a>
+            <a class="button" data-link="assistant" href="#" hidden>Try the live demo</a>
+            <a class="button button-quiet" href="https://github.com/HassaanUllahKhan11/voice-rag-sunmarke/tree/rebuild-website-assistant">View the code</a>
           </div>
         </div>
       </article>
 
       <article class="case case-flip">
-        <div class="case-media">
+        <div class="case-media" data-animate>
           <img class="shot shot-main" src="img/dashboard.webp" width="1280" height="800" alt="Sales dashboard for a sample candle shop: plain-English notes on last week, best seller, products picking up and slowing down, and key numbers." loading="lazy">
           <img class="shot shot-second" src="img/warehouse.webp" width="1536" height="1000" alt="Data warehouse overview with KPI cards and a monthly sales trend." loading="lazy">
         </div>
-        <div class="case-body">
-          <p class="case-num">02</p>
+        <div class="case-body" data-animate data-stagger>
+          <p class="case-num"><span>02</span>For small online shops</p>
           <h3>Know Your Numbers</h3>
           <p class="case-lede">A weekly sales dashboard for small online shops. Drop in a Shopify orders export and it tells you, in plain English, what changed last week and what to do about it.</p>
           <dl class="case-facts">
@@ -96,24 +144,24 @@
             <div><dt>What I built</dt><dd>Automatic weekly notes (best seller, products slowing down, customers to win back, what last year says about next month), plus trend, product, customer and seasonality charts.</dd></div>
             <div><dt>Also inside</dt><dd>My university data-warehouse project, rebuilt: a star schema over 100,000+ transactions with 20 analytical SQL queries, each answered on one page with a chart.</dd></div>
           </dl>
-          <p class="stack">Python · SQL · SQLite · ETL · Chart.js</p>
+          <ul class="stack" aria-label="Built with"><li>Python</li><li>SQL</li><li>SQLite</li><li>ETL</li><li>Chart.js</li></ul>
           <div class="case-links">
-            <a class="button button-quiet" data-link="dashboard" href="#" hidden>Try the live demo</a>
-            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/Walmart-sales-Data-warehouse-and-ETL-systems">View the code</a>
+            <a class="button" data-link="dashboard" href="#" hidden>Try the live demo</a>
+            <a class="button button-quiet" href="https://github.com/HassaanUllahKhan11/Walmart-sales-Data-warehouse-and-ETL-systems">View the code</a>
           </div>
         </div>
       </article>
 
       <article class="case">
-        <div class="case-media">
+        <div class="case-media" data-animate>
           <img class="shot shot-main" src="img/gameplan-ball.webp" width="932" height="761" alt="GamePlan AI: nine attackers, ten defenders and a goalkeeper placed on a pitch, with the ball set for a corner." loading="lazy">
           <div class="shot-pair">
             <img class="shot" src="img/gameplan-place.webp" width="1032" height="877" alt="Placing attackers, defenders and the goalkeeper before generating a simulation." loading="lazy">
             <img class="shot" src="img/gameplan-result.webp" width="1176" height="1456" alt="Simulation result: each attacker’s chance of receiving the ball and a 78% overall success rate." loading="lazy">
           </div>
         </div>
-        <div class="case-body">
-          <p class="case-num">03</p>
+        <div class="case-body" data-animate data-stagger>
+          <p class="case-num"><span>03</span>Final-year project · sports analytics</p>
           <h3>GamePlan AI</h3>
           <p class="case-lede">A football analytics platform that helps coaches design and test set pieces. Place the players, set the ball, and the model predicts how the corner or free kick will play out.</p>
           <dl class="case-facts">
@@ -121,9 +169,9 @@
             <div><dt>What I built</dt><dd>Graph neural networks that read player positions as a network, then score each attacker’s chance of receiving the ball, suggest better positioning, and simulate the set piece with an overall success rate.</dd></div>
             <div><dt>Details</dt><dd>Corner and free-kick modes, interactive player placement, animated simulations, separate Flask services for analysis, optimisation and simulation, and JWT sign-in. My final-year project.</dd></div>
           </dl>
-          <p class="stack">PyTorch · PyTorch Geometric · Flask · React · JWT</p>
+          <ul class="stack" aria-label="Built with"><li>PyTorch</li><li>PyTorch Geometric</li><li>Flask</li><li>React</li><li>JWT</li></ul>
           <div class="case-links">
-            <a class="link-arrow" href="https://github.com/HassaanUllahKhan11/GamePlan-AI">View the code</a>
+            <a class="button button-quiet" href="https://github.com/HassaanUllahKhan11/GamePlan-AI">View the code</a>
           </div>
         </div>
       </article>
@@ -236,6 +284,42 @@
       if (url) { a.href = url; a.hidden = false; }
     });
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Keep the giant hero name on its line(s): shrink it only if the real font would overflow.
+    (function () {
+      var h = document.getElementById("hero-title");
+      function fit() {
+        h.style.fontSize = "";
+        var over = h.scrollWidth / h.clientWidth;
+        if (over > 1) h.style.fontSize = (parseFloat(getComputedStyle(h).fontSize) / over * 0.98) + "px";
+      }
+      fit();
+      if (document.fonts) document.fonts.ready.then(fit);
+      addEventListener("resize", fit);
+    })();
+  </script>
+  <script>
+    // Entrance animations: [data-animate] fades and rises 20px when it scrolls into view;
+    // add data-stagger to animate its children one after another instead.
+    document.addEventListener("DOMContentLoaded", function () {
+      var root = document.documentElement;
+      if (!root.classList.contains("motion")) return;
+      if (!window.Motion) { root.classList.remove("motion"); return; }
+      var animate = Motion.animate, inView = Motion.inView, stagger = Motion.stagger;
+      inView("[data-animate]", function (entry) {
+        var el = entry.target || entry; // Motion 11 passes the IntersectionObserverEntry
+        var targets = el.hasAttribute("data-stagger") ? Array.from(el.children) : [el];
+        // Write the end state first; the animation overrides it while running, so nothing can flash back to hidden.
+        targets.forEach(function (t) { t.style.opacity = "1"; t.style.transform = "none"; });
+        try {
+          animate(targets,
+            { opacity: [0, 1], transform: ["translateY(20px)", "none"] },
+            { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: stagger(0.08) });
+        } catch (e) {
+          root.classList.remove("motion"); // never leave content hidden
+        }
+      }, { margin: "0px 0px -10% 0px" }); // any visible part counts, so very tall blocks still trigger
+    });
   </script>
 </body>
 </html>
