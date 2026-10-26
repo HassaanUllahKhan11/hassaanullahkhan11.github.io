@@ -7,19 +7,20 @@ Static one-page portfolio, hosted on GitHub Pages.
 - Only `index.html`, `style.css`, and small vanilla JS.
 
 ## Direction (redesign, October 2026)
-- Inspired by a bold dark portfolio: giant heavy uppercase display type, a visual overlapping the headline, a screenshot marquee, big numerals, stacked project cards.
-- Only real content: no invented client logos, testimonials, avatars or stats.
-- The redesign happens on the `redesign` branch, one section at a time. Sections still waiting keep the old styling (marked in `style.css`).
+- Inspired by Daniel Tan's "Unifiers of Japan" Dribbble shot: two colours (crimson + cream), a framed page with thin side rules and tiny rotated margin labels, condensed heavy uppercase display type, red bands for showpieces, cream bands for reading, notched frames, numbered "+" rows.
+- Hero: Urdu name above a giant name, with an original animated cartoon (inline SVG) standing over the letters. The cartoon was requested by Hassaan; it can be swapped for one drawn from his photo.
+- Only real content otherwise: no invented client logos, testimonials or stats.
+- Work happens on the `redesign` branch.
 
 ## Theming
-- Dark first; light mode follows `prefers-color-scheme: light` and `data-theme="light"`.
-- Change colors by updating the tokens at the top of `style.css`. Never create a parallel theme or hard-code hex colors in component rules.
-- Accent is a violet → pink gradient (`--gradient`, from `--accent` and `--accent-2`); use `--accent-ink` for accent-coloured text.
+- Light only: red and cream for everyone. No dark mode.
+- Change colors by updating the tokens at the top of `style.css`. Never hard-code hex colors in component rules (the favicon and `theme-color` meta are the only exceptions).
+- `--red` for display type, fills and rules; `--red-deep` for running text on cream; cream text on red. `--ink`, `--blush`, `--red-soft`, `--white` are for the cartoon only.
 
 ## Typography
-- Display: Archivo (Google Fonts variable, weight 800–900, `font-stretch` ~112%), uppercase, tight tracking.
+- Display: Archivo (Google Fonts variable), weight 800–900, `font-stretch` 62–85% (condensed), uppercase.
 - Body: Instrument Sans.
-- Instrument Serif is still loaded only for sections not yet redesigned; remove it once they're done.
+- Urdu name: Noto Naskh Arabic 700.
 
 ## LINKS object
 - Never remove or rename the `LINKS` object at the bottom of `index.html`.
@@ -30,7 +31,7 @@ Static one-page portfolio, hosted on GitHub Pages.
 - Sections fade in and rise 20px on scroll.
 - Card grids stagger by 0.08s.
 - Durations 0.3–0.6s. Nothing bouncy.
-- Exception: the hero screenshot marquee is a slow CSS loop (60s), pauses on hover, and becomes a plain scroller under reduced motion.
+- Exceptions, all in the hero cartoon: a blink every 5.5s, icons floating 8px over 6s, and pupils following the mouse (fine pointers only). All off under reduced motion.
 - Always respect `prefers-reduced-motion`.
 
 ## Design system

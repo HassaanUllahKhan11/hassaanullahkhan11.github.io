@@ -2,31 +2,26 @@
 
 ## Project overrides (read first; these win over everything below)
 
-Updated October 2026 for the dark, bold redesign. The generated output below is only a partial fit. Use it as follows:
+Updated October 2026 for the red + cream redesign (inspired by "Unifiers of Japan" by Daniel Tan). Light only. The generated output below is only a partial fit. Use it as follows:
 
-- **Color: replaced.** Dark first, violet → pink accent gradient. `style.css` defines these tokens:
+- **Color: replaced.** Two colours plus cartoon-only shades. `style.css` defines:
 
-  | Token | Dark (default) | Light |
-  |-------|----------------|-------|
-  | `--paper` | `#0B0B0D` | `#FAFAFA` |
-  | `--surface` | `#151518` | `#FFFFFF` |
-  | `--ink` | `#F4F4F5` | `#09090B` |
-  | `--muted` | `#A1A1AA` | `#52525B` |
-  | `--line` | `#26262B` | `#E4E4E7` |
-  | `--accent` (gradient start) | `#7C3AED` | `#7C3AED` |
-  | `--accent-2` (gradient end) | `#DB2777` | `#DB2777` |
-  | `--accent-ink` (accent text) | `#C4B5FD` | `#6D28D9` |
-  | `--on-accent` | `#FFFFFF` | `#FFFFFF` |
-  | `--success` | `#22C55E` | `#16A34A` |
-  | `--frame` (phone frame) | `#2A2A30` | `#09090B` |
+  | Token | Value | Use |
+  |-------|-------|-----|
+  | `--red` | `#C8102E` | display type, fills, rules on cream, red bands |
+  | `--red-deep` | `#8F0B22` | running text on cream |
+  | `--cream` | `#F6EFE2` | paper; text and rules on red |
+  | `--white` | `#FFFDF8` | eye whites, cartoon only |
+  | `--ink` | `#1F1614` | cartoon hair and features |
+  | `--blush` | `#F2B4BC` | cartoon shading |
+  | `--red-soft` | `#E36A7D` | cartoon shading |
 
-  Every text pair meets 4.5:1. White on both gradient ends passes (5.7:1 on `#7C3AED`, 4.6:1 on `#DB2777`), so buttons keep white labels in both modes. The violet also matches the Website AI Assistant's own UI.
-- **Spacing: adopted.** The `--space-*` scale below is defined in `style.css`.
-- **Typography: not adopted.** Display is Archivo (900, wide, uppercase); body is Instrument Sans. Caveat/Quicksand reads too casual for business clients.
-- **Style: not adopted.** Ignore Brutalism, "no smooth transitions", "sharp corners (0px)". Large rounded radii (16–30px) and pill buttons are the house style.
-- **Motion:** follow `CLAUDE.md` (Motion via jsDelivr, 0.3–0.6s, 20px rise, 0.08s stagger, reduced-motion respected; the hero marquee is the one slow loop).
-- **Page pattern:** hero (giant name + overlapping visual + marquee) → stacked project cards → numbered services → about → contact → big-name footer. Changes go one section at a time with review.
-- **Content:** no invented logos, testimonials or stats.
+  Cream on red is 5.2:1 and red on cream the same, so both pass 4.5:1. Rules on red bands are cream at 42%.
+- **Spacing: adopted.** The `--space-*` scale below is defined in `style.css`, plus `--gutter` (outside the side rules) and `--pad` (inside).
+- **Typography: not adopted.** Display is Archivo, condensed (62–85% width), 800–900, uppercase. Body is Instrument Sans. The Urdu name uses Noto Naskh Arabic.
+- **Style: partly adopted.** High contrast, visible rules and large blocks fit. Corners are square or nearly square (2px buttons, 6px screenshots); notched frames for statements and cards. Keep smooth transitions.
+- **Motion:** follow `CLAUDE.md`.
+- **Page pattern:** hero (Urdu name, giant name, cartoon) → facts row with emblem → notched statement → Work title → per project: cream title band + red band with screenshots and a notched card → services (big numerals) → process ("+" rows) → about → red contact band with footer.
 - **Component specs below:** hex values there are examples. Always use the tokens.
 
 > **LOGIC:** When building a specific page, first check `design-system/pages/[page-name].md`.
